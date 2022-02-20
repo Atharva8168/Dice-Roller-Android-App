@@ -10,10 +10,11 @@ import java.util.*
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var diceImage : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         val rollButton : Button = findViewById(R.id.roll_button)
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice(){
-        val diceImage : ImageView = findViewById(R.id.dice_image)
+        diceImage = findViewById(R.id.dice_image)
 
         var randomInt = Random.nextInt(6) + 1
 
